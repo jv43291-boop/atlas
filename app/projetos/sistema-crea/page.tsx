@@ -78,19 +78,9 @@ export default function SistemaEstacionamentoPage() {
             image: "/images/projects/crea/funcionarios.png",
           },
           {
-            title: "Cadastro de Funcionário",
-            description: "Cadastro com múltiplos veículos.",
-            image: "/images/projects/crea/cadastro-funcionario.png",
-          },
-          {
             title: "Visitantes",
             description: "Controle de visitantes.",
             image: "/images/projects/crea/visitantes.png",
-          },
-          {
-            title: "Cadastro de Visitante",
-            description: "Registro de entrada.",
-            image: "/images/projects/crea/cadastro-visitante.png",
           },
           {
             title: "Auditoria",

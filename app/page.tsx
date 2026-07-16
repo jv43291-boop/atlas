@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Stack from "@/components/sections/Stack";
 import Projects from "@/components/sections/Projects";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Stack />
         <Projects />
       </main>
     </>

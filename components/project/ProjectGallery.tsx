@@ -1,40 +1,79 @@
-import Image from "next/image";
+"use client";
 
-type ProjectGalleryItemProps = {
+import { useState } from "react";
+import ProjectGalleryItem from "@/components/project/ProjectGalleryItem";
+import ImageModal from "@/components/project/ImageModal";
+
+type GalleryItem = {
   title: string;
   description: string;
   image: string;
 };
 
-export default function ProjectGalleryItem({
+type ProjectGalleryProps = {
+  title: string;
+  items: GalleryItem[];
+};
+
+export default function ProjectGallery({
   title,
-  description,
-  image,
-}: ProjectGalleryItemProps) {
+  items,
+}: ProjectGalleryProps) {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const handleClose = () => setSelectedIndex(null);
+
+  const handleNext = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex + 1) % items.length);
+  };
+
+  const handlePrevious = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex - 1 + items.length) % items.length);
+  };
+
+  const selectedItem =
+    selectedIndex !== null ? items[selectedIndex] : null;
+
   return (
-    <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-blue-500/20">
+    <>
+      <section className="px-6 py-16">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl font-bold text-white">
+            {title}
+          </h2>
 
-      <div className="group relative aspect-video overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {items.map((item, index) => (
+              <button
+                key={item.title}
+                type="button"
+                onClick={() => setSelectedIndex(index)}
+                className="text-left"
+              >
+                <ProjectGalleryItem
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <div className="p-6">
-
-        <h3 className="text-2xl font-semibold text-white">
-          {title}
-        </h3>
-
-        <p className="mt-4 leading-7 text-zinc-400">
-          {description}
-        </p>
-
-      </div>
-
-    </article>
+      <ImageModal
+        open={selectedItem !== null}
+        image={selectedItem?.image ?? ""}
+        title={selectedItem?.title ?? ""}
+        description={selectedItem?.description ?? ""}
+        currentIndex={selectedIndex ?? 0}
+        total={items.length}
+        onClose={handleClose}
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+      />
+    </>
   );
 }

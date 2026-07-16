@@ -1,5 +1,9 @@
 import Link from "next/link";
 import ProjectHero from "@/components/project/ProjectHero";
+import ProjectFeatures from "@/components/project/ProjectFeatures";
+import ProjectGallery from "@/components/project/ProjectGallery";
+import ProjectTechnologies from "@/components/project/ProjectTechnologies";
+import ProjectNavigation from "@/components/project/ProjectNavigation";
 
 export default function SistemaEscolarPage() {
   return (
@@ -28,6 +32,85 @@ export default function SistemaEscolarPage() {
 
         </div>
       </section>
+
+      <ProjectTechnologies
+        title="Tecnologias Utilizadas"
+        technologies={[
+          "PHP",
+          "MySQL",
+          "Arquitetura MVC",
+          "Bootstrap 5",
+          "HTML5",
+          "PDO",
+        ]}
+      />
+
+      <ProjectFeatures
+        title="Principais Funcionalidades"
+        features={[
+          "CRUD completo de alunos",
+          "CRUD completo de professores",
+          "Cadastro de disciplinas",
+          "Lançamento de notas",
+          "Cálculo automático da média",
+          "Arquitetura MVC",
+          "Integração com MySQL",
+          "Interface com Bootstrap 5",
+        ]}
+      />
+
+      <ProjectGallery
+        title="Galeria do Projeto"
+        items={[
+          {
+            title: "Dashboard",
+            description: "Tela inicial do sistema.",
+            image: "/images/projects/escolar/dashboard.png",
+          },
+          {
+            title: "Gerenciamento de Alunos",
+            description: "Listagem dos alunos.",
+            image: "/images/projects/escolar/alunos.png",
+          },
+          {
+            title: "Cadastro de Alunos",
+            description: "Cadastro de novos alunos.",
+            image: "/images/projects/escolar/cadastrar-alunos.png",
+          },
+          {
+            title: "Gerenciamento de Professores",
+            description: "Painel de professores.",
+            image: "/images/projects/escolar/professores.png",
+          },
+          {
+            title: "Gerenciamento de Disciplinas",
+            description: "Listagem das disciplinas.",
+            image: "/images/projects/escolar/disciplinas.png",
+          },
+          {
+            title: "Cadastro de Disciplinas",
+            description: "Cadastro de disciplinas.",
+            image: "/images/projects/escolar/cadastrar-disciplinas.png",
+          },
+          {
+            title: "Lançamento de Notas",
+            description: "Notas e cálculo da média.",
+            image: "/images/projects/escolar/notas.png",
+          },
+          {
+            title: "Edição de Registros",
+            description: "Atualização de dados.",
+            image: "/images/projects/escolar/editar.png",
+          },
+        ]}
+      />
+
+      <ProjectNavigation
+        next={{
+          title: "Sistema de Estacionamento - CREA-AM",
+          href: "/projetos/sistema-crea",
+        }}
+      />
 
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-6xl">
