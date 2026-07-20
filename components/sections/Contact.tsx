@@ -90,20 +90,21 @@ export default function Contact() {
           </a>
 
           {/* Currículo */}
-          <a
-            href="#"
-            className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20"
-          >
-            <FileText className="mb-4 text-blue-400" size={32} />
+<a
+  href="/curriculo/Joao_Victor_Pinheiro_Magalhaes_CV.pdf"
+  download
+  className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20"
+>
+  <FileText className="mb-4 text-blue-400" size={32} />
 
-            <h3 className="text-xl font-semibold">
-              Currículo
-            </h3>
+  <h3 className="text-xl font-semibold">
+    Currículo
+  </h3>
 
-            <p className="mt-2 text-zinc-400">
-              Em breve disponível
-            </p>
-          </a>
+  <p className="mt-2 text-zinc-400">
+    Clique para baixar o PDF
+  </p>
+</a>
 
         </div>
 
