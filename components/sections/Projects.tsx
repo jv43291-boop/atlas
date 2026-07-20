@@ -53,7 +53,7 @@ export default function Projects() {
             title="Atlas"
             badge="⭐ Projeto Atual"
             description="Meu portfólio profissional desenvolvido em Next.js, criado para apresentar meus projetos e acompanhar minha evolução como desenvolvedor."
-            image="/images/projects/atlas.png"
+            image="/images/projects/Atlas.png"
             href="/projetos/atlas"
             technologies={[
               "Next.js",

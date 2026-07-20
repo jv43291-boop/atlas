@@ -77,7 +77,7 @@ export default function AtlasPage() {
     <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl border border-zinc-800 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
 
       <Image
-        src="/Images/projects/atlas/Atlas.png"
+        src="/images/projects/atlas/Atlas.png"
         alt="Tela inicial do Atlas"
         fill
         sizes="100vw"
