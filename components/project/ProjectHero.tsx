@@ -4,7 +4,7 @@ type ProjectHeroProps = {
   title: string;
   subtitle: string;
   badge: string;
-  image: string;
+  image?: string;
 };
 
 export default function ProjectHero({
@@ -29,15 +29,17 @@ export default function ProjectHero({
           {subtitle}
         </p>
 
-        <div className="relative mt-12 aspect-video overflow-hidden rounded-3xl border border-zinc-800">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        {image && (
+          <div className="relative mt-12 aspect-video overflow-hidden rounded-3xl border border-zinc-800">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
 
       </div>
     </section>

@@ -1,6 +1,8 @@
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-950 px-6 text-white">
+    <section
+      id="hero"
+    className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-950 px-6 text-white">
       {/* Efeito de luz ao fundo */}
       <div className="absolute inset-0">
         <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-3xl"></div>

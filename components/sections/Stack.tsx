@@ -40,7 +40,7 @@ export default function Stack() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
             <h3 className="mb-6 text-xl font-semibold text-blue-400">
               Front-end
             </h3>
@@ -49,7 +49,7 @@ export default function Stack() {
               {frontend.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm"
+                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
                 >
                   {tech}
                 </span>
@@ -57,7 +57,7 @@ export default function Stack() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
             <h3 className="mb-6 text-xl font-semibold text-blue-400">
               Back-end
             </h3>
@@ -66,7 +66,7 @@ export default function Stack() {
               {backend.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm"
+                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
                 >
                   {tech}
                 </span>
@@ -74,7 +74,7 @@ export default function Stack() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
             <h3 className="mb-6 text-xl font-semibold text-blue-400">
               Ferramentas
             </h3>
@@ -83,7 +83,7 @@ export default function Stack() {
               {ferramentas.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm"
+                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
                 >
                   {tech}
                 </span>

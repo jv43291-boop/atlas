@@ -22,12 +22,18 @@ export default function SistemaEstacionamentoPage() {
             Sobre o Projeto
           </h2>
 
-          <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
-            Este foi meu primeiro projeto desenvolvido para um ambiente real.
-            Durante seu desenvolvimento aprimorei conceitos de organização do
-            código, segurança, autenticação de usuários, permissões de acesso,
-            auditoria e arquitetura modular utilizando PHP e MySQL.
-          </p>
+      <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
+  Desenvolvido inicialmente como um projeto acadêmico, o Sistema de
+  Estacionamento do CREA-AM evoluiu para uma solução utilizada pela
+  instituição. O sistema foi projetado para gerenciar o controle de acesso
+  de veículos, cadastro de usuários e administração de vagas, utilizando uma
+  arquitetura moderna baseada em Next.js e controle de permissões por perfil.
+  Durante sua evolução, foi integrada a API institucional do CREA-AM para
+  autenticação de funcionários, permitindo a validação automática de usuários
+  e tornando o processo de acesso mais seguro e integrado aos sistemas da
+  organização.
+</p>
+
 
         </div>
       </section>
