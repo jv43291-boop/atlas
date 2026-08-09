@@ -7,5 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/projetos/sistema-escolar`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/projetos/sistema-crea`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/projetos/atlas`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/projetos/atlas-parking`, changeFrequency: "monthly", priority: 0.9 },
   ];
 }

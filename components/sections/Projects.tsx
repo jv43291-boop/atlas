@@ -62,6 +62,21 @@ export default function Projects() {
             ]}
           />
 
+          <ProjectCard
+            title="Atlas Parking"
+            badge="🚘 Plataforma Corporativa"
+            description="Plataforma para gestão de estacionamentos, controle de acessos, indicadores, auditoria e integração com sistemas LPR."
+            image="/images/projects/atlas-parking/02-dashboard.png"
+            href="/projetos/atlas-parking"
+            sourceUrl="https://github.com/jv43291-boop/Atlas-Parking"
+            technologies={[
+              "PHP 8.2",
+              "MySQL",
+              "Docker",
+              "Bootstrap 5",
+            ]}
+          />
+
         </div>
 
       </div>
