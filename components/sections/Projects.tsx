@@ -55,6 +55,7 @@ export default function Projects() {
             description="Meu portfólio profissional desenvolvido em Next.js, criado para apresentar meus projetos e acompanhar minha evolução como desenvolvedor."
             image="/images/projects/Atlas.png"
             href="/projetos/atlas"
+            sourceUrl="https://github.com/jv43291-boop/atlas"
             technologies={[
               "Next.js",
               "React",

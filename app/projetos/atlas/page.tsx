@@ -4,9 +4,21 @@ import ProjectTechnologies from "@/components/project/ProjectTechnologies";
 import ProjectFeatures from "@/components/project/ProjectFeatures";
 import Image from "next/image";
 
+export const metadata: Metadata = {
+  title: "Atlas — Portfólio Profissional",
+  description: "Conheça a construção do Atlas, portfólio em Next.js, React, TypeScript e Tailwind CSS.",
+  alternates: { canonical: "/projetos/atlas" },
+  openGraph: {
+    title: "Atlas — Portfólio Profissional | João Victor Magalhães",
+    description: "Portfólio profissional desenvolvido com Next.js, React, TypeScript e Tailwind CSS.",
+    url: "/projetos/atlas",
+    images: ["/og.png"],
+  },
+};
+
 export default function AtlasPage() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
+    <main id="conteudo" className="min-h-screen bg-zinc-950 text-white">
 
       <ProjectHero
         badge="🌍 Projeto Atual"
@@ -60,6 +72,19 @@ export default function AtlasPage() {
           "Projeto em evolução contínua",
         ]}
       />
+
+      <section className="px-6 py-8">
+        <div className="mx-auto max-w-6xl">
+          <a
+            href="https://github.com/jv43291-boop/atlas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-blue-500"
+          >
+            Ver código no GitHub
+          </a>
+        </div>
+      </section>
 
       <section className="px-6 py-16">
   <div className="mx-auto max-w-6xl">
@@ -124,3 +149,4 @@ export default function AtlasPage() {
     </main>
   );
 }
+import type { Metadata } from "next";

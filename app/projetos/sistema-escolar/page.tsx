@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ProjectHero from "@/components/project/ProjectHero";
+import ProjectTechnologies from "@/components/project/ProjectTechnologies";
+import ProjectFeatures from "@/components/project/ProjectFeatures";
+import ProjectGallery from "@/components/project/ProjectGallery";
+
+export const metadata: Metadata = {
+  title: "Sistema Escolar",
+  description: "Estudo de caso de um sistema escolar em PHP, MVC, PDO e MySQL desenvolvido por João Victor Magalhães.",
+  alternates: { canonical: "/projetos/sistema-escolar" },
+  openGraph: {
+    title: "Sistema Escolar | João Victor Magalhães",
+    description: "Sistema escolar desenvolvido com PHP, arquitetura MVC, PDO e MySQL.",
+    url: "/projetos/sistema-escolar",
+    images: ["/og.png"],
+  },
+};
 
 export default function SistemaEscolarPage() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
+    <main id="conteudo" className="min-h-screen bg-zinc-950 text-white">
 
       <ProjectHero
         badge="🟢 Primeiro Projeto"
@@ -28,6 +44,35 @@ export default function SistemaEscolarPage() {
 
         </div>
       </section>
+
+      <ProjectTechnologies
+        title="Tecnologias Utilizadas"
+        technologies={["PHP", "Arquitetura MVC", "MySQL", "PDO", "Bootstrap 5", "HTML5", "CSS3"]}
+      />
+
+      <ProjectFeatures
+        title="Principais Funcionalidades"
+        features={[
+          "Cadastro e gerenciamento de alunos",
+          "Cadastro e gerenciamento de professores",
+          "Organização de disciplinas",
+          "Registro e edição de notas",
+          "Dashboard administrativo",
+          "Operações CRUD integradas ao MySQL",
+        ]}
+      />
+
+      <ProjectGallery
+        title="Galeria do Projeto"
+        items={[
+          { title: "Dashboard", description: "Visão geral do sistema escolar.", image: "/images/projects/escolar/dashboard.png" },
+          { title: "Alunos", description: "Listagem e gerenciamento de alunos.", image: "/images/projects/escolar/alunos.png" },
+          { title: "Cadastro de alunos", description: "Formulário para inclusão de alunos.", image: "/images/projects/escolar/cadastro-alunos.png" },
+          { title: "Professores", description: "Listagem e gerenciamento de professores.", image: "/images/projects/escolar/professores.png" },
+          { title: "Disciplinas", description: "Organização das disciplinas cadastradas.", image: "/images/projects/escolar/disciplinas.png" },
+          { title: "Notas", description: "Registro e acompanhamento de notas.", image: "/images/projects/escolar/notas.png" },
+        ]}
+      />
 
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-6xl">

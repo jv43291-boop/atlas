@@ -49,6 +49,7 @@ export default function ProjectGallery({
               <button
                 key={item.title}
                 type="button"
+                aria-label={`Ampliar imagem: ${item.title}`}
                 onClick={() => setSelectedIndex(index)}
                 className="text-left"
               >

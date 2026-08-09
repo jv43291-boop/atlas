@@ -13,11 +13,12 @@ export default function ProjectGalleryItem({
 }: ProjectGalleryItemProps) {
   return (
     <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-blue-500/20">
-      <div className="group relative aspect-[16/10]overflow-hidden">
+      <div className="group relative aspect-[16/10] overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
+          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>

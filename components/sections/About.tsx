@@ -20,7 +20,6 @@ export default function About() {
                 alt="Foto de João Victor"
                 width={320}
                 height={320}
-                priority
                 className="h-80 w-80 object-cover"
               />
             </div>

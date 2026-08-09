@@ -8,6 +8,7 @@ type ProjectCardProps = {
   image: string;
   badge: string;
   href: string;
+  sourceUrl?: string;
 };
 
 export default function ProjectCard({
@@ -17,6 +18,7 @@ export default function ProjectCard({
   image,
   badge,
   href,
+  sourceUrl,
 }: ProjectCardProps) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/30">
@@ -26,6 +28,7 @@ export default function ProjectCard({
           src={image}
           alt={title}
           fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
@@ -55,13 +58,23 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="mt-auto pt-8">
+        <div className="mt-auto grid gap-3 pt-8 sm:grid-cols-2">
           <Link
             href={href}
-            className="block w-full rounded-xl bg-blue-600 py-3 text-center font-semibold shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-blue-500 hover:shadow-blue-500/50"
+            className={`block w-full rounded-xl bg-blue-600 py-3 text-center font-semibold shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-blue-500/50 ${sourceUrl ? "" : "sm:col-span-2"}`}
           >
             Ver Projeto
           </Link>
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full rounded-xl border border-zinc-700 py-3 text-center font-semibold transition hover:-translate-y-1 hover:border-blue-500 hover:text-blue-400"
+            >
+              Ver Código
+            </a>
+          )}
         </div>
 
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useId, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -27,8 +27,17 @@ export default function ImageModal({
   onNext,
   onPrevious,
 }: ImageModalProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const titleId = useId();
+  const descriptionId = useId();
+
   useEffect(() => {
     if (!open) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
 
     function handleKeyDown(event: KeyboardEvent) {
       switch (event.key) {
@@ -48,6 +57,8 @@ export default function ImageModal({
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      previouslyFocused?.focus();
     };
   }, [open, onClose, onNext, onPrevious]);
 
@@ -56,6 +67,10 @@ export default function ImageModal({
   return (
     <div
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={titleId}
+      aria-describedby={descriptionId}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6 backdrop-blur-sm"
     >
       <div
@@ -63,6 +78,9 @@ export default function ImageModal({
         className="relative w-full max-w-6xl overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl"
       >
         <button
+          ref={closeButtonRef}
+          type="button"
+          aria-label="Fechar galeria"
           onClick={onClose}
           className="absolute right-4 top-4 z-20 rounded-lg bg-zinc-800 p-2 transition hover:bg-zinc-700"
         >
@@ -70,6 +88,8 @@ export default function ImageModal({
         </button>
 
         <button
+          type="button"
+          aria-label="Imagem anterior"
           onClick={onPrevious}
           className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800 p-3 transition hover:bg-zinc-700"
         >
@@ -77,6 +97,8 @@ export default function ImageModal({
         </button>
 
         <button
+          type="button"
+          aria-label="Próxima imagem"
           onClick={onNext}
           className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800 p-3 transition hover:bg-zinc-700"
         >
@@ -88,18 +110,19 @@ export default function ImageModal({
             src={image}
             alt={title}
             fill
+            sizes="(min-width: 1152px) 1152px, 100vw"
             className="object-contain"
           />
         </div>
 
         <div className="border-t border-zinc-800 p-6">
           <div className="mb-2 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-white">{title}</h2>
+            <h2 id={titleId} className="text-2xl font-bold text-white">{title}</h2>
             <p className="text-sm text-zinc-400">
               {currentIndex + 1} of {total}
             </p>
           </div>
-          <p className="text-zinc-300">{description}</p>
+          <p id={descriptionId} className="text-zinc-300">{description}</p>
         </div>
       </div>
     </div>
