@@ -10,14 +10,14 @@ export default function InfoCard({
   description,
 }: InfoCardProps) {
   return (
-    <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20">
-      <div className="text-4xl">{icon}</div>
+    <div className="border-b border-r border-blue-400/15 bg-[#04101d]/70 p-7 transition-colors hover:bg-blue-950/30">
+      <div className="font-mono text-xs font-bold tracking-[0.2em] text-blue-400">{icon}</div>
 
-      <h3 className="mt-4 text-xl font-bold text-white">
+      <h3 className="mt-8 text-lg font-black uppercase tracking-[-0.02em] text-white">
         {title}
       </h3>
 
-      <p className="mt-2 leading-7 text-zinc-400">
+      <p className="mt-3 text-sm leading-6 text-slate-400">
         {description}
       </p>
     </div>

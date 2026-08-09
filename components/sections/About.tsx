@@ -5,47 +5,48 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-zinc-900 px-6 py-24 text-white"
+      className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-4xl font-bold">
-          Sobre Mim
-        </h2>
+      <div className="mx-auto max-w-[1440px]">
+        <p className="atlas-kicker">01 / Sobre</p>
+        <h2 className="atlas-display atlas-section-title mt-5">Lógica, clareza<br/><span className="text-blue-500">e evolução.</span></h2>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-2 md:items-center">
-          <div className="flex justify-center">
-            <div className="overflow-hidden rounded-3xl border border-zinc-700 shadow-xl shadow-blue-500/10 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/30">
+        <div className="mt-16 grid gap-12 lg:grid-cols-[0.7fr_1fr] lg:items-center">
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="absolute -left-5 -top-5 h-24 w-24 border-l border-t border-blue-500/70" />
+            <div className="relative aspect-[4/5] overflow-hidden border border-blue-400/25 bg-[#06101d]">
               <Image
                 src="/images/profile.jpg"
                 alt="Foto de João Victor"
-                width={320}
-                height={320}
-                className="h-80 w-80 object-cover"
+                fill
+                sizes="(min-width: 1024px) 420px, 90vw"
+                className="object-cover grayscale-[20%]"
               />
             </div>
+            <div className="absolute -bottom-5 -right-5 border border-blue-400/20 bg-[#02070d] px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-blue-300">Full Stack / Mobile</div>
           </div>
 
-          <div>
-            <p className="text-lg leading-8 text-zinc-300">
+          <div className="max-w-2xl">
+            <p className="text-xl leading-9 text-slate-200">
               Olá! Meu nome é{" "}
-              <span className="font-semibold text-blue-400">
+              <span className="font-bold text-white">
                 João Victor Pinheiro Magalhães
               </span>.
             </p>
 
-            <p className="mt-6 leading-8 text-zinc-400">
+            <p className="mt-7 leading-8 text-slate-400">
               Encontrei na programação um ambiente onde lógica,
               organização e clareza transformam ideias em soluções.
               Foi nessa combinação que descobri uma profissão com a qual realmente me identifiquei.
             </p>
 
-            <p className="mt-6 leading-8 text-zinc-400">
+            <p className="mt-6 leading-8 text-slate-400">
               Atualmente estudo Desenvolvimento Full Stack e Mobile,
               buscando evoluir continuamente através de projetos reais,
               aprendizado constante e dedicação diária.
             </p>
 
-            <p className="mt-6 leading-8 text-zinc-400">
+            <p className="mt-6 leading-8 text-slate-400">
               O Projeto Atlas representa minha evolução como desenvolvedor
               e meu compromisso em criar aplicações modernas, organizadas
               e com foco na melhor experiência para o usuário.
@@ -53,27 +54,27 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-24 grid border-l border-t border-blue-400/15 md:grid-cols-2 lg:grid-cols-4">
           <InfoCard
-            icon="💻"
+            icon="01"
             title="Projetos"
             description="Construindo aplicações reais para desenvolver experiência prática."
           />
 
           <InfoCard
-            icon="📚"
+            icon="02"
             title="Aprendizado"
             description="Evoluindo continuamente em tecnologias Full Stack e Mobile."
           />
 
           <InfoCard
-            icon="🚀"
+            icon="03"
             title="Objetivo"
             description="Atuar como Desenvolvedor Full Stack criando soluções modernas."
           />
 
           <InfoCard
-            icon="🎯"
+            icon="04"
             title="Compromisso"
             description="Código limpo, organização e evolução constante todos os dias."
           />

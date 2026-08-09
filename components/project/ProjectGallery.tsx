@@ -38,9 +38,9 @@ export default function ProjectGallery({
 
   return (
     <>
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-white">
+      <section className="px-6 py-20 lg:px-10 lg:py-24">
+        <div className="mx-auto max-w-[1440px]">
+          <h2 className="text-4xl text-white">
             {title}
           </h2>
 

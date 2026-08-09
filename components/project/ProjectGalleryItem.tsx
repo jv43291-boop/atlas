@@ -12,7 +12,7 @@ export default function ProjectGalleryItem({
   image,
 }: ProjectGalleryItemProps) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-blue-500/20">
+    <article className="atlas-panel overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-blue-400/60">
       <div className="group relative aspect-[16/10] overflow-hidden">
         <Image
           src={image}
@@ -23,12 +23,12 @@ export default function ProjectGalleryItem({
         />
       </div>
 
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold text-white">
+      <div className="border-t border-blue-400/15 p-6">
+        <h3 className="text-xl font-black uppercase tracking-[-0.03em] text-white">
           {title}
         </h3>
 
-        <p className="mt-4 leading-7 text-zinc-400">
+        <p className="mt-3 text-sm leading-6 text-slate-400">
           {description}
         </p>
       </div>

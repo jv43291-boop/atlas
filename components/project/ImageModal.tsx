@@ -75,14 +75,14 @@ export default function ImageModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-6xl overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl"
+        className="atlas-panel relative w-full max-w-6xl overflow-hidden shadow-2xl"
       >
         <button
           ref={closeButtonRef}
           type="button"
           aria-label="Fechar galeria"
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 rounded-lg bg-zinc-800 p-2 transition hover:bg-zinc-700"
+          className="absolute right-4 top-4 z-20 border border-blue-400/20 bg-[#06101d] p-2 transition hover:border-blue-400"
         >
           <X size={22} />
         </button>
@@ -91,7 +91,7 @@ export default function ImageModal({
           type="button"
           aria-label="Imagem anterior"
           onClick={onPrevious}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800 p-3 transition hover:bg-zinc-700"
+          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 border border-blue-400/20 bg-[#06101d] p-3 transition hover:border-blue-400"
         >
           <ChevronLeft />
         </button>
@@ -100,7 +100,7 @@ export default function ImageModal({
           type="button"
           aria-label="Próxima imagem"
           onClick={onNext}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800 p-3 transition hover:bg-zinc-700"
+          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 border border-blue-400/20 bg-[#06101d] p-3 transition hover:border-blue-400"
         >
           <ChevronRight />
         </button>
@@ -115,14 +115,14 @@ export default function ImageModal({
           />
         </div>
 
-        <div className="border-t border-zinc-800 p-6">
+        <div className="border-t border-blue-400/15 p-6">
           <div className="mb-2 flex items-center justify-between">
             <h2 id={titleId} className="text-2xl font-bold text-white">{title}</h2>
-            <p className="text-sm text-zinc-400">
+            <p className="font-mono text-xs text-blue-300">
               {currentIndex + 1} of {total}
             </p>
           </div>
-          <p id={descriptionId} className="text-zinc-300">{description}</p>
+          <p id={descriptionId} className="text-slate-300">{description}</p>
         </div>
       </div>
     </div>

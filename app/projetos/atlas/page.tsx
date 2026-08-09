@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AtlasPage() {
   return (
-    <main id="conteudo" className="min-h-screen bg-zinc-950 text-white">
+    <main id="conteudo" className="project-page min-h-screen">
 
       <ProjectHero
         badge="🌍 Projeto Atual"
@@ -34,7 +34,7 @@ export default function AtlasPage() {
             Sobre o Projeto
           </h2>
 
-          <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
+          <p className="mt-6 max-w-4xl leading-8 text-slate-400">
             O Atlas foi criado para representar minha trajetória como
             desenvolvedor. Mais do que um simples portfólio, ele funciona
             como um ambiente onde aplico novas tecnologias, boas práticas
@@ -79,7 +79,7 @@ export default function AtlasPage() {
             href="https://github.com/jv43291-boop/atlas"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-blue-500"
+            className="atlas-button-primary"
           >
             Ver código no GitHub
           </a>
@@ -93,13 +93,13 @@ export default function AtlasPage() {
       Preview do Projeto
     </h2>
 
-    <p className="mt-4 max-w-3xl leading-8 text-zinc-400">
+    <p className="mt-4 max-w-3xl leading-8 text-slate-400">
       Abaixo está a tela inicial do Atlas. Como este projeto é o próprio
       portfólio que você está navegando, uma única prévia é suficiente para
       apresentar sua identidade visual e organização.
     </p>
 
-    <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl border border-zinc-800 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
+    <div className="relative mt-8 aspect-video overflow-hidden border border-blue-400/25 transition hover:border-blue-400/60">
 
       <Image
         src="/images/projects/atlas/Atlas.png"
@@ -116,13 +116,13 @@ export default function AtlasPage() {
 </section>
 
       <section className="px-6 py-16">
-        <div className="mx-auto max-w-6xl rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
+        <div className="atlas-panel mx-auto max-w-6xl p-8 transition hover:border-blue-400/60">
 
           <h2 className="text-3xl font-bold text-white">
             🚀 Desenvolvimento Contínuo
           </h2>
 
-          <p className="mt-6 leading-8 text-zinc-400">
+          <p className="mt-6 leading-8 text-slate-400">
             O Atlas é um projeto de longo prazo. Sempre que aprendo uma nova
             tecnologia, desenvolvo uma nova solução ou concluo um novo projeto,
             ele é atualizado para refletir minha evolução como desenvolvedor.
@@ -138,7 +138,7 @@ export default function AtlasPage() {
 
           <Link
             href="/"
-            className="inline-flex rounded-xl border border-zinc-700 px-6 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:text-blue-400 hover:shadow-lg hover:shadow-blue-500/20"
+            className="atlas-button-secondary"
           >
             ← Voltar ao Atlas
           </Link>

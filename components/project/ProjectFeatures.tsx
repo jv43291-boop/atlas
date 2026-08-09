@@ -8,10 +8,10 @@ export default function ProjectFeatures({
   features,
 }: ProjectFeaturesProps) {
   return (
-    <section className="px-6 py-16">
-      <div className="mx-auto max-w-6xl">
+    <section className="px-6 py-20 lg:px-10 lg:py-24">
+      <div className="mx-auto max-w-[1440px]">
 
-        <h2 className="text-3xl font-bold text-white">
+        <h2 className="text-4xl text-white">
           {title}
         </h2>
 
@@ -20,11 +20,11 @@ export default function ProjectFeatures({
           {features.map((feature) => (
             <div
               key={feature}
-              className="flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-900 p-5 transition hover:border-blue-500"
+              className="atlas-panel flex items-center gap-4 p-5 transition hover:border-blue-400/60"
             >
-              <span className="text-xl">✅</span>
+              <span className="font-mono text-xs font-bold text-blue-400">{"//"}</span>
 
-              <p className="text-zinc-300">
+              <p className="text-slate-300">
                 {feature}
               </p>
             </div>

@@ -25,31 +25,29 @@ export default function Stack() {
   return (
     <section
       id="stack"
-      className="bg-zinc-950 px-6 py-24 text-white"
+      className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1440px]">
+        <p className="atlas-kicker">02 / Stack</p>
+        <h2 className="atlas-display atlas-section-title mt-5">Ferramentas para<br/><span className="text-blue-500">construir o todo.</span></h2>
 
-        <h2 className="text-4xl font-bold">
-          Minha Stack
-        </h2>
-
-        <p className="mt-4 max-w-3xl text-zinc-400">
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
           Estas são as principais tecnologias e ferramentas que utilizo
           atualmente no desenvolvimento dos meus projetos.
         </p>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-3">
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
-            <h3 className="mb-6 text-xl font-semibold text-blue-400">
-              Front-end
+          <div className="bg-[#030b14] p-8 transition hover:bg-[#071528]">
+            <h3 className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
+              01 — Front-end
             </h3>
 
             <div className="flex flex-wrap gap-3">
               {frontend.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
+                  className="border border-blue-400/15 bg-blue-950/20 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400/60 hover:text-white"
                 >
                   {tech}
                 </span>
@@ -57,16 +55,16 @@ export default function Stack() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
-            <h3 className="mb-6 text-xl font-semibold text-blue-400">
-              Back-end
+          <div className="bg-[#030b14] p-8 transition hover:bg-[#071528]">
+            <h3 className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
+              02 — Back-end
             </h3>
 
             <div className="flex flex-wrap gap-3">
               {backend.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
+                  className="border border-blue-400/15 bg-blue-950/20 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400/60 hover:text-white"
                 >
                   {tech}
                 </span>
@@ -74,16 +72,16 @@ export default function Stack() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20">
-            <h3 className="mb-6 text-xl font-semibold text-blue-400">
-              Ferramentas
+          <div className="bg-[#030b14] p-8 transition hover:bg-[#071528]">
+            <h3 className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
+              03 — Ferramentas
             </h3>
 
             <div className="flex flex-wrap gap-3">
               {ferramentas.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-800 px-4 py-2 text-sm transition-colors duration-300 hover:bg-blue-500 hover:text-white"
+                  className="border border-blue-400/15 bg-blue-950/20 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400/60 hover:text-white"
                 >
                   {tech}
                 </span>

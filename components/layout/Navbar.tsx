@@ -15,21 +15,23 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-blue-400/15 bg-[#02070d]/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-10">
 
         <Link
           href="/"
-          className="text-2xl font-bold text-white transition hover:text-blue-400"
+          aria-label="Atlas — página inicial"
+          className="flex items-center gap-3 text-white transition hover:text-blue-300"
         >
-          Atlas
+          <span className="flex h-10 w-10 items-center justify-center border border-blue-500/40 bg-blue-600 text-lg font-black">A</span>
+          <span className="text-sm font-black tracking-[0.34em]">ATLAS</span>
         </Link>
 
         <nav aria-label="Navegação principal">
-          <ul className="hidden items-center gap-8 text-sm font-medium text-zinc-300 md:flex">
+          <ul className="hidden items-center gap-9 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-400 md:flex">
             {links.map((link) => (
               <li key={link.href}>
-                <Link className="transition hover:text-blue-400" href={link.href}>
+                <Link className="transition hover:text-white" href={link.href}>
                   {link.label}
                 </Link>
               </li>
@@ -43,21 +45,21 @@ export default function Navbar() {
           aria-controls="menu-mobile"
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           onClick={() => setMenuOpen((open) => !open)}
-          className="rounded-lg p-2 text-zinc-200 transition hover:bg-zinc-800 hover:text-blue-400 md:hidden"
+          className="border border-blue-400/20 p-2 text-slate-200 transition hover:border-blue-400 hover:text-blue-300 md:hidden"
         >
           {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
 
       </div>
       {menuOpen && (
-        <nav id="menu-mobile" aria-label="Navegação mobile" className="border-t border-zinc-800 bg-zinc-950 md:hidden">
-          <ul className="mx-auto max-w-7xl px-6 py-3 text-zinc-200">
+        <nav id="menu-mobile" aria-label="Navegação mobile" className="border-t border-blue-400/15 bg-[#02070d] md:hidden">
+          <ul className="mx-auto max-w-7xl px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-slate-300">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-lg px-3 py-3 transition hover:bg-zinc-900 hover:text-blue-400"
+                  className="block border-b border-blue-400/10 px-1 py-4 transition hover:text-blue-300"
                 >
                   {link.label}
                 </Link>

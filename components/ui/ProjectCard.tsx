@@ -21,29 +21,29 @@ export default function ProjectCard({
   sourceUrl,
 }: ProjectCardProps) {
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/30">
+    <article className="atlas-panel group flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-blue-400/60">
 
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-64 overflow-hidden border-b border-blue-400/15">
         <Image
           src={image}
           alt={title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-cover opacity-80 saturate-[0.75] transition duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:saturate-100"
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-7">
 
-        <span className="mb-4 w-fit rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-500/20">
+        <span className="atlas-kicker mb-6 w-fit border-l-2 border-blue-500 pl-3">
           {badge}
         </span>
 
-        <h3 className="text-2xl font-bold text-white">
+        <h3 className="text-2xl font-black uppercase leading-tight tracking-[-0.04em] text-white">
           {title}
         </h3>
 
-        <p className="mt-4 leading-7 text-zinc-400">
+        <p className="mt-4 leading-7 text-slate-400">
           {description}
         </p>
 
@@ -51,7 +51,7 @@ export default function ProjectCard({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-zinc-800 px-3 py-1 text-sm text-zinc-300 transition-colors duration-300 group-hover:bg-zinc-700"
+              className="border border-blue-400/15 bg-blue-950/20 px-3 py-1 font-mono text-xs text-slate-400"
             >
               {tech}
             </span>
@@ -61,7 +61,7 @@ export default function ProjectCard({
         <div className="mt-auto grid gap-3 pt-8 sm:grid-cols-2">
           <Link
             href={href}
-            className={`block w-full rounded-xl bg-blue-600 py-3 text-center font-semibold shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-blue-500/50 ${sourceUrl ? "" : "sm:col-span-2"}`}
+            className={`atlas-button-primary w-full ${sourceUrl ? "" : "sm:col-span-2"}`}
           >
             Ver Projeto
           </Link>
@@ -70,7 +70,7 @@ export default function ProjectCard({
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full rounded-xl border border-zinc-700 py-3 text-center font-semibold transition hover:-translate-y-1 hover:border-blue-500 hover:text-blue-400"
+              className="atlas-button-secondary w-full"
             >
               Ver Código
             </a>
@@ -78,6 +78,6 @@ export default function ProjectCard({
         </div>
 
       </div>
-    </div>
+    </article>
   );
 }

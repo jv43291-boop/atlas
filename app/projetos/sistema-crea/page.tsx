@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function SistemaEstacionamentoPage() {
   return (
-    <main id="conteudo" className="min-h-screen bg-zinc-950 text-white">
+    <main id="conteudo" className="project-page min-h-screen">
 
       <ProjectHero
         badge="🔵 Primeiro Projeto Real"
@@ -34,7 +34,7 @@ export default function SistemaEstacionamentoPage() {
             Sobre o Projeto
           </h2>
 
-      <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
+      <p className="mt-6 max-w-4xl leading-8 text-slate-400">
   Desenvolvido inicialmente como um projeto acadêmico, o Sistema de
   Estacionamento do CREA-AM evoluiu para uma solução utilizada pela
   instituição. O sistema foi projetado para gerenciar o controle de acesso
@@ -113,7 +113,7 @@ export default function SistemaEstacionamentoPage() {
 
           <Link
             href="/"
-            className="inline-flex rounded-xl border border-zinc-700 px-6 py-3 transition hover:border-blue-500 hover:text-blue-400"
+            className="atlas-button-secondary"
           >
             ← Voltar ao Atlas
           </Link>

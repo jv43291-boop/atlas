@@ -4,21 +4,19 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-zinc-950 px-6 py-24 text-white"
+      className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1440px]">
+        <p className="atlas-kicker">03 / Projetos</p>
+        <h2 className="atlas-display atlas-section-title mt-5">Projetos que<br/><span className="text-blue-500">marcam evolução.</span></h2>
 
-        <h2 className="text-center text-4xl font-bold">
-          Meus Projetos
-        </h2>
-
-        <p className="mx-auto mt-6 max-w-2xl text-center leading-8 text-zinc-400">
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
           Cada projeto representa uma etapa da minha evolução como
           desenvolvedor, aplicando novas tecnologias, boas práticas e
           soluções para desafios cada vez maiores.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
           <ProjectCard
             title="Sistema Escolar"
