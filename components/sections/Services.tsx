@@ -137,6 +137,9 @@ export default function Services() {
                   href={whatsappLink(service.title)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-umami-event="whatsapp"
+                  data-umami-event-origem="servicos"
+                  data-umami-event-servico={service.id}
                   className="mt-auto inline-flex items-center gap-2 pt-8 text-xs font-bold uppercase tracking-[0.14em] text-blue-300 transition group-hover:text-white"
                 >
                   Pedir orçamento <ArrowUpRight size={14} aria-hidden="true" />
@@ -160,6 +163,9 @@ export default function Services() {
               href={whatsappLink("um projeto diferente")}
               target="_blank"
               rel="noopener noreferrer"
+              data-umami-event="whatsapp"
+              data-umami-event-origem="servicos"
+              data-umami-event-servico="outro"
               className="mt-8 inline-flex items-center gap-2 border border-white/40 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-white hover:text-blue-700"
             >
               Chamar no WhatsApp <ArrowUpRight size={14} aria-hidden="true" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/site";
+import Script from "next/script";
+import { SITE_URL, UMAMI_WEBSITE_ID, UMAMI_SCRIPT_URL } from "@/lib/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -108,6 +109,13 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        {UMAMI_WEBSITE_ID && (
+          <Script
+            src={UMAMI_SCRIPT_URL}
+            data-website-id={UMAMI_WEBSITE_ID}
+            strategy="lazyOnload"
+          />
+        )}
       </body>
     </html>
   );

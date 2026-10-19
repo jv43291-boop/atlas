@@ -21,6 +21,7 @@ export default function Contact() {
           {/* E-mail */}
           <a
             href="mailto:jv43291@gmail.com"
+            data-umami-event="email"
             className="group bg-[#030b14] p-7 transition hover:bg-[#071528]"
           >
             <Mail className="mb-10 text-blue-400" size={28} />
@@ -75,6 +76,8 @@ export default function Contact() {
             href="https://wa.me/5592984337079?text=Olá%20João!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="whatsapp"
+            data-umami-event-origem="contato"
             className="group bg-[#030b14] p-7 transition hover:bg-[#071528]"
           >
             <MessageCircle className="mb-10 text-blue-400" size={28} />
@@ -91,6 +94,7 @@ export default function Contact() {
           {/* Currículo */}
 <a
   href={withBasePath("/curriculo/Joao_Victor_Pinheiro_Magalhaes_CV.pdf")}
+  data-umami-event="curriculo"
   download
   className="group bg-[#030b14] p-7 transition hover:bg-[#071528]"
 >

@@ -13,6 +13,14 @@
 export const BASE_PATH = "/atlas";
 export const SITE_URL = "https://jv43291-boop.github.io/atlas";
 
+/**
+ * Analytics (Umami Cloud — https://cloud.umami.is, plano gratuito, sem cookie).
+ * Cole aqui o "Website ID" que o Umami mostra ao cadastrar o site.
+ * Enquanto estiver vazio, nenhum script de analytics é carregado.
+ */
+export const UMAMI_WEBSITE_ID = "";
+export const UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js";
+
 export function withBasePath(path: string): string {
   if (!path.startsWith("/")) return path;
   return `${BASE_PATH}${path}`;

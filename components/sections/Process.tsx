@@ -119,6 +119,8 @@ export default function Process() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              data-umami-event="whatsapp"
+              data-umami-event-origem="como-trabalho"
               className="atlas-button-primary mt-8"
             >
               Marcar a conversa <ArrowUpRight size={16} aria-hidden="true" />
