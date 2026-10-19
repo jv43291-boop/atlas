@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.png",
-        width: 1730,
-        height: 909,
-        alt: "João Victor Pinheiro Magalhães — Full Stack e Mobile Developer",
+        width: 1200,
+        height: 630,
+        alt: "João Victor Magalhães — desenvolvedor freelancer em Manaus: sites, sistemas, apps e automações",
       },
     ],
   },
