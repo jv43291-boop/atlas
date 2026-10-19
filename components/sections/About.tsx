@@ -10,14 +10,14 @@ export default function About() {
     >
       <div className="mx-auto max-w-[1440px]">
         <p className="atlas-kicker">01 / Sobre</p>
-        <h2 className="atlas-display atlas-section-title mt-5">Lógica, clareza<br/><span className="text-blue-500">e evolução.</span></h2>
+        <h2 className="atlas-display atlas-section-title mt-5">Quem vai fazer<br/><span className="text-blue-500">o seu projeto.</span></h2>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[0.7fr_1fr] lg:items-center">
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -left-5 -top-5 h-24 w-24 border-l border-t border-blue-500/70" />
             <div className="relative aspect-[4/5] overflow-hidden border border-blue-400/25 bg-[#06101d]">
               <Image
-                src={withBasePath("/images/profile.jpg")}
+                src={withBasePath("/images/profile.webp")}
                 alt="Foto de João Victor"
                 fill
                 sizes="(min-width: 1024px) 420px, 90vw"
@@ -36,21 +36,25 @@ export default function About() {
             </p>
 
             <p className="mt-7 leading-8 text-slate-400">
-              Encontrei na programação um ambiente onde lógica,
-              organização e clareza transformam ideias em soluções.
-              Foi nessa combinação que descobri uma profissão com a qual realmente me identifiquei.
+              Desenvolvedor full stack em Manaus. Trabalho o dia a dia em
+              uma empresa de tecnologia e, como freelancer, atendo pequenas
+              empresas, profissionais liberais e órgãos que precisam de um
+              sistema, um site ou uma automação que funcione de verdade.
             </p>
 
             <p className="mt-6 leading-8 text-slate-400">
-              Atualmente estudo Desenvolvimento Full Stack e Mobile,
-              buscando evoluir continuamente através de projetos reais,
-              aprendizado constante e dedicação diária.
+              Já entreguei um sistema de controle de acesso que está em uso
+              no CREA-AM e mantenho o Atlas Parking, uma plataforma completa
+              de gestão de estacionamentos com cobrança, Pix e integração
+              com câmeras. Sei o que é código que precisa continuar
+              funcionando depois que o projeto acaba.
             </p>
 
             <p className="mt-6 leading-8 text-slate-400">
-              O Projeto Atlas representa minha evolução como desenvolvedor
-              e meu compromisso em criar aplicações modernas, organizadas
-              e com foco na melhor experiência para o usuário.
+              Meu jeito de trabalhar é simples: entender o problema antes de
+              propor a solução, combinar escopo, prazo e valor por escrito,
+              entregar em etapas que você consegue testar e ficar por perto
+              depois da entrega.
             </p>
           </div>
         </div>
@@ -58,26 +62,26 @@ export default function About() {
         <div className="mt-24 grid border-l border-t border-blue-400/15 md:grid-cols-2 lg:grid-cols-4">
           <InfoCard
             icon="01"
-            title="Projetos"
-            description="Construindo aplicações reais para desenvolver experiência prática."
+            title="Escopo por escrito"
+            description="Antes de começar, você sabe o que vai receber, quando e por quanto."
           />
 
           <InfoCard
             icon="02"
-            title="Aprendizado"
-            description="Evoluindo continuamente em tecnologias Full Stack e Mobile."
+            title="Entrega em etapas"
+            description="Você testa partes prontas ao longo do caminho, não só no final."
           />
 
           <InfoCard
             icon="03"
-            title="Objetivo"
-            description="Atuar como Desenvolvedor Full Stack criando soluções modernas."
+            title="Compra ou assinatura"
+            description="Você pode comprar o sistema com código e acessos, ou assinar e eu hospedo e cuido de tudo."
           />
 
           <InfoCard
             icon="04"
-            title="Compromisso"
-            description="Código limpo, organização e evolução constante todos os dias."
+            title="Suporte depois"
+            description="Ajustes pós-entrega e opção de manutenção mensal para quem precisa."
           />
         </div>
       </div>

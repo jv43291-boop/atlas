@@ -103,7 +103,7 @@ export default function AtlasPage() {
     <div className="relative mt-8 aspect-video overflow-hidden border border-blue-400/25 transition hover:border-blue-400/60">
 
       <Image
-        src={withBasePath("/images/projects/atlas/Atlas.png")}
+        src={withBasePath("/images/projects/atlas/Atlas.webp")}
         alt="Tela inicial do Atlas"
         fill
         sizes="100vw"

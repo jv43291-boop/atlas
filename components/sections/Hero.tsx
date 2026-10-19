@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="atlas-grid-fade absolute inset-0" />
       <div className="relative z-10 mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-[1fr_0.62fr] lg:items-end">
         <div>
-          <p className="atlas-kicker">Portfólio / 2026 — Full Stack & Mobile</p>
+          <p className="atlas-kicker">Desenvolvedor freelancer · Manaus, AM</p>
           <h1 className="atlas-display mt-8 max-w-[980px] text-[clamp(3.8rem,9vw,9.2rem)]">
             João Victor
             <span className="block text-blue-500">Pinheiro</span>
@@ -17,10 +17,11 @@ export default function Hero() {
           </h1>
           <div className="mt-10 h-1 w-36 bg-blue-600" />
           <h2 className="mt-7 font-mono text-sm font-bold uppercase tracking-[0.22em] text-slate-300 sm:text-base">
-            Full Stack & Mobile Developer
+            Sistemas, sites e automações para pequenas empresas
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
-            Transformo estudo, lógica e organização em aplicações reais — da interface ao banco de dados.
+            Do orçamento à entrega, com uma pessoa só pra falar: eu desenho,
+            construo, publico e mantenho — da tela ao banco de dados.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
@@ -46,10 +47,10 @@ export default function Hero() {
             </div>
             <div className="py-14">
               <span className="text-[10rem] font-black leading-none tracking-[-0.1em] text-blue-600/90">A</span>
-              <p className="-mt-3 text-xs font-bold uppercase tracking-[0.34em] text-slate-400">Código que vira solução</p>
+              <p className="-mt-3 text-xs font-bold uppercase tracking-[0.34em] text-slate-400">Problema que vira sistema</p>
             </div>
             <div className="grid grid-cols-2 border-t border-blue-400/20 pt-5 font-mono text-xs uppercase tracking-wider text-slate-500">
-              <span>Next.js / React</span><span className="text-right">PHP / MySQL</span>
+              <span>Web / Mobile</span><span className="text-right">Sistemas / Automações</span>
             </div>
           </div>
         </aside>

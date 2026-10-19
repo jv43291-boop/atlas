@@ -24,7 +24,7 @@ export default function SistemaEstacionamentoPage() {
         badge="🔵 Primeiro Projeto Real"
         title="Sistema de Estacionamento - CREA-AM"
         subtitle="Sistema desenvolvido para o CREA-AM com foco no controle de acesso ao estacionamento, gerenciamento de funcionários, visitantes e auditoria administrativa."
-        image="/images/projects/crea/dashboard.png"
+        image="/images/projects/crea/dashboard.webp"
       />
 
       <section className="px-6 py-16">
@@ -83,27 +83,27 @@ export default function SistemaEstacionamentoPage() {
           {
             title: "Tela de Login",
             description: "Autenticação do sistema.",
-            image: "/images/projects/crea/login.png",
+            image: "/images/projects/crea/login.webp",
           },
           {
             title: "Dashboard",
             description: "Painel principal.",
-            image: "/images/projects/crea/dashboard.png",
+            image: "/images/projects/crea/dashboard.webp",
           },
           {
             title: "Funcionários",
             description: "Gerenciamento de funcionários.",
-            image: "/images/projects/crea/funcionarios.png",
+            image: "/images/projects/crea/funcionarios.webp",
           },
           {
             title: "Visitantes",
             description: "Controle de visitantes.",
-            image: "/images/projects/crea/visitantes.png",
+            image: "/images/projects/crea/visitantes.webp",
           },
           {
             title: "Auditoria",
             description: "Histórico das ações administrativas.",
-            image: "/images/projects/crea/auditoria.png",
+            image: "/images/projects/crea/auditoria.webp",
           },
         ]}
       />

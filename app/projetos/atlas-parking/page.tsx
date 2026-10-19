@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Plataforma SaaS multiempresa em PHP e MySQL para gestão de estacionamentos, com LPR, cobrança, Pix automático e auditoria.",
     url: "/projetos/atlas-parking",
-    images: ["/images/projects/atlas-parking/painel.png"],
+    images: ["/images/projects/atlas-parking/painel.webp"],
   },
 };
 
@@ -49,7 +49,7 @@ export default function AtlasParkingPage() {
         badge="⭐ Projeto em destaque · v2.2"
         title="Atlas Parking"
         subtitle="Plataforma SaaS multiempresa para gestão de estacionamentos: portaria integrada a câmeras de leitura de placas, mensalistas e cobrança com Pix automático, várias unidades por empresa, indicadores, auditoria e LGPD — tudo em containers, com testes e deploy automatizados."
-        image="/images/projects/atlas-parking/painel.png"
+        image="/images/projects/atlas-parking/painel.webp"
       />
 
       <section className="px-6 py-16 lg:px-10">
@@ -140,32 +140,32 @@ export default function AtlasParkingPage() {
           {
             title: "Painel",
             description: "Ocupação em tempo real, entradas e saídas dos últimos dias e permanência média por setor.",
-            image: "/images/projects/atlas-parking/painel.png",
+            image: "/images/projects/atlas-parking/painel.webp",
           },
           {
             title: "Registro de entrada",
             description: "Portaria: veículo, dono, vaga livre do tipo certo e setor de destino.",
-            image: "/images/projects/atlas-parking/entrada.png",
+            image: "/images/projects/atlas-parking/entrada.webp",
           },
           {
             title: "Indicadores",
             description: "Fluxo por período, ocupação por bloco e tempo de permanência por setor.",
-            image: "/images/projects/atlas-parking/indicadores.png",
+            image: "/images/projects/atlas-parking/indicadores.webp",
           },
           {
             title: "Auditoria",
             description: "Trilha de eventos com responsável, data, IP e os campos que realmente mudaram.",
-            image: "/images/projects/atlas-parking/auditoria.png",
+            image: "/images/projects/atlas-parking/auditoria.webp",
           },
           {
             title: "Perfis e permissões",
             description: "Matriz de permissões por perfil, aplicada na hora para quem já está usando o sistema.",
-            image: "/images/projects/atlas-parking/perfis.png",
+            image: "/images/projects/atlas-parking/perfis.webp",
           },
           {
             title: "Integrações LPR",
             description: "Modo automático, credenciais por sistema de câmeras e eventos recebidos de cada câmera.",
-            image: "/images/projects/atlas-parking/integracoes.png",
+            image: "/images/projects/atlas-parking/integracoes.webp",
           },
         ]}
       />

@@ -8,7 +8,7 @@ export default function Contact() {
       className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">05 / Contato</p>
+        <p className="atlas-kicker">06 / Contato</p>
         <h2 className="atlas-display atlas-section-title mt-5">Vamos construir<br/><span className="text-blue-500">algo real.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">

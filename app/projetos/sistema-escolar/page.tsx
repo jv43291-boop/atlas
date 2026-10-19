@@ -25,7 +25,7 @@ export default function SistemaEscolarPage() {
         badge="🟢 Primeiro Projeto"
         title="Sistema Escolar"
         subtitle="Sistema de gerenciamento escolar desenvolvido utilizando PHP seguindo a arquitetura MVC. O projeto permite gerenciar alunos, professores, disciplinas e notas através de um CRUD completo integrado ao MySQL."
-        image="/images/projects/escolar/dashboard.png"
+        image="/images/projects/escolar/dashboard.webp"
       />
 
       <section className="px-6 py-16">
@@ -65,12 +65,12 @@ export default function SistemaEscolarPage() {
       <ProjectGallery
         title="Galeria do Projeto"
         items={[
-          { title: "Dashboard", description: "Visão geral do sistema escolar.", image: "/images/projects/escolar/dashboard.png" },
-          { title: "Alunos", description: "Listagem e gerenciamento de alunos.", image: "/images/projects/escolar/alunos.png" },
-          { title: "Cadastro de alunos", description: "Formulário para inclusão de alunos.", image: "/images/projects/escolar/cadastro-alunos.png" },
-          { title: "Professores", description: "Listagem e gerenciamento de professores.", image: "/images/projects/escolar/professores.png" },
-          { title: "Disciplinas", description: "Organização das disciplinas cadastradas.", image: "/images/projects/escolar/disciplinas.png" },
-          { title: "Notas", description: "Registro e acompanhamento de notas.", image: "/images/projects/escolar/notas.png" },
+          { title: "Dashboard", description: "Visão geral do sistema escolar.", image: "/images/projects/escolar/dashboard.webp" },
+          { title: "Alunos", description: "Listagem e gerenciamento de alunos.", image: "/images/projects/escolar/alunos.webp" },
+          { title: "Cadastro de alunos", description: "Formulário para inclusão de alunos.", image: "/images/projects/escolar/cadastro-alunos.webp" },
+          { title: "Professores", description: "Listagem e gerenciamento de professores.", image: "/images/projects/escolar/professores.webp" },
+          { title: "Disciplinas", description: "Organização das disciplinas cadastradas.", image: "/images/projects/escolar/disciplinas.webp" },
+          { title: "Notas", description: "Registro e acompanhamento de notas.", image: "/images/projects/escolar/notas.webp" },
         ]}
       />
 

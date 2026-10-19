@@ -10,6 +10,7 @@ export default function Navbar() {
     { href: "/#hero", label: "Home" },
     { href: "/#about", label: "Sobre" },
     { href: "/#services", label: "Serviços" },
+    { href: "/#process", label: "Como trabalho" },
     { href: "/#projects", label: "Projetos" },
     { href: "/#stack", label: "Stack" },
     { href: "/#contact", label: "Contato" },

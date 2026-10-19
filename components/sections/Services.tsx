@@ -45,7 +45,7 @@ const services: Service[] = [
     icon: Smartphone,
     title: "Aplicativos mobile",
     description:
-      "Apps para Android e iOS que conversam com o seu sistema, para equipe de campo, atendimento ou clientes.",
+      "Apps para Android e iOS que conversam com o seu sistema, para equipe de campo, atendimento ou clientes. Avalio o escopo antes de fechar.",
     deliverables: ["Android e iOS", "Integração com API", "Publicação nas lojas"],
     idealFor: "Negócios com equipe externa ou atendimento móvel",
   },

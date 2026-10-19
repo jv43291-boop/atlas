@@ -2,24 +2,26 @@ export default function Stack() {
   const frontend = [
     "Next.js",
     "React",
+    "Vue 3",
     "TypeScript",
     "Tailwind CSS",
-    "HTML5",
-    "CSS3",
+    "Bootstrap 5",
   ];
 
   const backend = [
-    "PHP",
+    "PHP 8",
     "MySQL",
-    "PDO",
-    "Arquitetura MVC",
+    "APIs REST",
+    "GraphQL",
+    "Docker",
   ];
 
   const ferramentas = [
-    "Git",
-    "GitHub",
-    "VS Code",
-    "XAMPP",
+    "Git / GitHub",
+    "GitHub Actions (CI)",
+    "Testes automatizados",
+    "n8n",
+    "Integrações (WhatsApp, Pix, CRM)",
   ];
 
   return (
@@ -28,12 +30,13 @@ export default function Stack() {
       className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">03 / Stack</p>
-        <h2 className="atlas-display atlas-section-title mt-5">Ferramentas para<br/><span className="text-blue-500">construir o todo.</span></h2>
+        <p className="atlas-kicker">04 / Stack</p>
+        <h2 className="atlas-display atlas-section-title mt-5">O que eu uso<br/><span className="text-blue-500">pra entregar.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          Estas são as principais tecnologias e ferramentas que utilizo
-          atualmente no desenvolvimento dos meus projetos.
+          Tecnologias atuais, com manutenção fácil e sem prender você a um
+          fornecedor. Se o seu sistema já existe em outra stack, eu avalio
+          antes de propor qualquer troca.
         </p>
 
         <div className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-3">
@@ -74,7 +77,7 @@ export default function Stack() {
 
           <div className="bg-[#030b14] p-8 transition hover:bg-[#071528]">
             <h3 className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
-              03 — Ferramentas
+              03 — Entrega e integrações
             </h3>
 
             <div className="flex flex-wrap gap-3">
