@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { SITE_URL, UMAMI_WEBSITE_ID, UMAMI_SCRIPT_URL } from "@/lib/site";
+import {
+  SITE_URL,
+  UMAMI_WEBSITE_ID,
+  UMAMI_SCRIPT_URL,
+  GOOGLE_SITE_VERIFICATION,
+} from "@/lib/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -27,6 +32,9 @@ export const metadata: Metadata = {
   authors: [{ name: "João Victor Pinheiro Magalhães" }],
   creator: "João Victor Pinheiro Magalhães",
   alternates: { canonical: "/" },
+  verification: GOOGLE_SITE_VERIFICATION
+    ? { google: GOOGLE_SITE_VERIFICATION }
+    : undefined,
   openGraph: {
     title: "João Victor Magalhães | Desenvolvedor Freelancer em Manaus",
     description:

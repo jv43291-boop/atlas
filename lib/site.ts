@@ -21,6 +21,14 @@ export const SITE_URL = "https://jv43291-boop.github.io/atlas";
 export const UMAMI_WEBSITE_ID = "47a2cb4d-9b1a-4e76-87e3-e13c1da5c47d";
 export const UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js";
 
+/**
+ * Google Search Console — verificação por tag HTML.
+ * No Search Console: Adicionar propriedade → "Prefixo do URL" → cole a URL do
+ * site → método "Tag HTML". Copie só o valor de content="..." e cole aqui.
+ * Vazio = nenhuma tag é emitida.
+ */
+export const GOOGLE_SITE_VERIFICATION = "m_JGG2xTFX8sTwBLIH-KKS77aKEIYzFxPPDYevLfHqo";
+
 export function withBasePath(path: string): string {
   if (!path.startsWith("/")) return path;
   return `${BASE_PATH}${path}`;
