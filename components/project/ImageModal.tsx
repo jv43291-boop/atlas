@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef } from "react";
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 type ImageModalProps = {
@@ -107,7 +108,7 @@ export default function ImageModal({
 
         <div className="relative aspect-video bg-black">
           <Image
-            src={image}
+            src={withBasePath(image)}
             alt={title}
             fill
             sizes="(min-width: 1152px) 1152px, 100vw"

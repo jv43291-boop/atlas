@@ -28,7 +28,7 @@ export default function Stack() {
       className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">02 / Stack</p>
+        <p className="atlas-kicker">03 / Stack</p>
         <h2 className="atlas-display atlas-section-title mt-5">Ferramentas para<br/><span className="text-blue-500">construir o todo.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">

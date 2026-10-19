@@ -1,0 +1,19 @@
+/**
+ * Configuração central do endereço do site.
+ *
+ * O site é publicado no GitHub Pages em https://jv43291-boop.github.io/atlas,
+ * ou seja, numa subpasta. Por isso existe o BASE_PATH: o Next aplica ele
+ * sozinho em <Link> e nas rotas, mas NÃO em src de imagens nem em href de
+ * arquivos estáticos (PDF, etc.) — nesses casos use withBasePath().
+ *
+ * Se um dia o site for para a raiz (jv43291-boop.github.io) ou para um
+ * domínio próprio, basta trocar BASE_PATH para "" e SITE_URL aqui e em
+ * next.config.ts.
+ */
+export const BASE_PATH = "/atlas";
+export const SITE_URL = "https://jv43291-boop.github.io/atlas";
+
+export function withBasePath(path: string): string {
+  if (!path.startsWith("/")) return path;
+  return `${BASE_PATH}${path}`;
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 import Link from "next/link";
 
 type ProjectCardProps = {
@@ -25,7 +26,7 @@ export default function ProjectCard({
 
       <div className="relative h-64 overflow-hidden border-b border-blue-400/15">
         <Image
-          src={image}
+          src={withBasePath(image)}
           alt={title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"

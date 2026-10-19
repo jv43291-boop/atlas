@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 
 type ProjectGalleryItemProps = {
   title: string;
@@ -15,7 +16,7 @@ export default function ProjectGalleryItem({
     <article className="atlas-panel overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-blue-400/60">
       <div className="group relative aspect-[16/10] overflow-hidden">
         <Image
-          src={image}
+          src={withBasePath(image)}
           alt={title}
           fill
           sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"

@@ -1,7 +1,11 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
+
+// Necessário para o "output: export" (GitHub Pages)
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://atlas-eosin-five.vercel.app";
+  const baseUrl = SITE_URL;
   return [
     { url: baseUrl, changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/projetos/sistema-escolar`, changeFrequency: "monthly", priority: 0.8 },

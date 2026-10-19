@@ -24,18 +24,16 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
-            href="#projects"
+            href="#services"
             className="atlas-button-primary"
           >
-            Explorar projetos <ArrowDown size={16} aria-hidden="true" />
+            Ver serviços <ArrowDown size={16} aria-hidden="true" />
           </a>
           <a
-            href="https://github.com/jv43291-boop"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
             className="atlas-button-secondary"
           >
-            Ver GitHub <ArrowUpRight size={16} aria-hidden="true" />
+            Explorar projetos <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </div>
         </div>

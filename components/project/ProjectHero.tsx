@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 
 type ProjectHeroProps = {
   title: string;
@@ -33,7 +34,7 @@ export default function ProjectHero({
         {image && (
           <div className="relative mt-14 aspect-video overflow-hidden border border-blue-400/25 bg-[#06101d] shadow-[0_30px_100px_rgba(17,88,220,0.12)]">
             <Image
-              src={image}
+              src={withBasePath(image)}
               alt={title}
               fill
               sizes="(min-width: 1152px) 1152px, 100vw"

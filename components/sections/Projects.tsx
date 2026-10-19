@@ -7,7 +7,7 @@ export default function Projects() {
       className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">03 / Projetos</p>
+        <p className="atlas-kicker">04 / Projetos</p>
         <h2 className="atlas-display atlas-section-title mt-5">Projetos que<br/><span className="text-blue-500">marcam evolução.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">

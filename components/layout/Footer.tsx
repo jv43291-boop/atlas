@@ -9,6 +9,7 @@ export default function Footer() {
           <p className="mt-4 text-xs uppercase tracking-[0.13em]">© {new Date().getFullYear()} João Victor Magalhães — Desenvolvido com Next.js</p>
         </div>
         <nav aria-label="Links do rodapé" className="flex gap-6 text-xs font-bold uppercase tracking-[0.14em]">
+          <Link href="/#services" className="transition hover:text-blue-400">Serviços</Link>
           <Link href="/#projects" className="transition hover:text-blue-400">Projetos</Link>
           <Link href="/#contact" className="transition hover:text-blue-400">Contato</Link>
           <a href="https://github.com/jv43291-boop" target="_blank" rel="noopener noreferrer" className="transition hover:text-blue-400">GitHub</a>

@@ -1,4 +1,5 @@
 import { Mail, Code, User, FileText, MessageCircle } from "lucide-react";
+import { withBasePath } from "@/lib/site";
 
 export default function Contact() {
   return (
@@ -7,7 +8,7 @@ export default function Contact() {
       className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">04 / Contato</p>
+        <p className="atlas-kicker">05 / Contato</p>
         <h2 className="atlas-display atlas-section-title mt-5">Vamos construir<br/><span className="text-blue-500">algo real.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
@@ -89,7 +90,7 @@ export default function Contact() {
 
           {/* Currículo */}
 <a
-  href="/curriculo/Joao_Victor_Pinheiro_Magalhaes_CV.pdf"
+  href={withBasePath("/curriculo/Joao_Victor_Pinheiro_Magalhaes_CV.pdf")}
   download
   className="group bg-[#030b14] p-7 transition hover:bg-[#071528]"
 >

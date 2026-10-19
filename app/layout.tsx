@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atlas-eosin-five.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "João Victor Magalhães | Desenvolvedor Full Stack",
     template: "%s | João Victor Magalhães",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 import InfoCard from "@/components/ui/InfoCard";
 
 export default function About() {
@@ -16,7 +17,7 @@ export default function About() {
             <div className="absolute -left-5 -top-5 h-24 w-24 border-l border-t border-blue-500/70" />
             <div className="relative aspect-[4/5] overflow-hidden border border-blue-400/25 bg-[#06101d]">
               <Image
-                src="/images/profile.jpg"
+                src={withBasePath("/images/profile.jpg")}
                 alt="Foto de João Victor"
                 fill
                 sizes="(min-width: 1024px) 420px, 90vw"

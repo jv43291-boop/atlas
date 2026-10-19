@@ -3,6 +3,7 @@ import ProjectHero from "@/components/project/ProjectHero";
 import ProjectTechnologies from "@/components/project/ProjectTechnologies";
 import ProjectFeatures from "@/components/project/ProjectFeatures";
 import Image from "next/image";
+import { withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Atlas — Portfólio Profissional",
@@ -102,7 +103,7 @@ export default function AtlasPage() {
     <div className="relative mt-8 aspect-video overflow-hidden border border-blue-400/25 transition hover:border-blue-400/60">
 
       <Image
-        src="/images/projects/atlas/Atlas.png"
+        src={withBasePath("/images/projects/atlas/Atlas.png")}
         alt="Tela inicial do Atlas"
         fill
         sizes="100vw"
