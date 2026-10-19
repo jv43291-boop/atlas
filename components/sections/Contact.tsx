@@ -1,5 +1,5 @@
-import { Mail, Code, User, FileText, MessageCircle } from "lucide-react";
-import { withBasePath } from "@/lib/site";
+import { Mail, Code, User, FileText, MessageCircle, MapPin } from "lucide-react";
+import { withBasePath, GOOGLE_BUSINESS_URL } from "@/lib/site";
 
 export default function Contact() {
   return (
@@ -12,11 +12,11 @@ export default function Contact() {
         <h2 className="atlas-display atlas-section-title mt-5">Vamos construir<br/><span className="text-blue-500">algo real.</span></h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          Estou sempre aberto a novas oportunidades, projetos e
-          colaborações. Fique à vontade para entrar em contato.
+          Me conta o que você precisa resolver. Respondo no WhatsApp e, se
+          fizer sentido, marcamos uma conversa sem custo.
         </p>
 
-        <div className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
           {/* E-mail */}
           <a
@@ -88,6 +88,25 @@ export default function Contact() {
 
             <p className="mt-3 text-sm text-slate-500 group-hover:text-slate-300">
               Disponível para contato profissional
+            </p>
+          </a>
+
+          {/* Google */}
+          <a
+            href={GOOGLE_BUSINESS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-umami-event="google-perfil"
+            className="group bg-[#030b14] p-7 transition hover:bg-[#071528]"
+          >
+            <MapPin className="mb-10 text-blue-400" size={28} />
+
+            <h3 className="font-black uppercase tracking-[-0.02em]">
+              Google
+            </h3>
+
+            <p className="mt-3 text-sm text-slate-500 group-hover:text-slate-300">
+              Perfil e avaliações no Google
             </p>
           </a>
 

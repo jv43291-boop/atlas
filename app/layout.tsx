@@ -5,6 +5,7 @@ import {
   UMAMI_WEBSITE_ID,
   UMAMI_SCRIPT_URL,
   GOOGLE_SITE_VERIFICATION,
+  GOOGLE_BUSINESS_URL,
 } from "@/lib/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -81,6 +82,7 @@ const jsonLd = {
   },
   founder: { "@type": "Person", name: "João Victor Pinheiro Magalhães" },
   sameAs: [
+    GOOGLE_BUSINESS_URL,
     "https://github.com/jv43291-boop",
     "https://www.linkedin.com/in/joão-victor-pinheiro-magalhães-246060226",
   ],

@@ -29,6 +29,9 @@ export const UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js";
  */
 export const GOOGLE_SITE_VERIFICATION = "m_JGG2xTFX8sTwBLIH-KKS77aKEIYzFxPPDYevLfHqo";
 
+/** Perfil da Empresa no Google (link público de compartilhamento). */
+export const GOOGLE_BUSINESS_URL = "https://share.google/W8PtBuWiasreSZ3Db";
+
 export function withBasePath(path: string): string {
   if (!path.startsWith("/")) return path;
   return `${BASE_PATH}${path}`;
