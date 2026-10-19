@@ -18,7 +18,7 @@ export const SITE_URL = "https://jv43291-boop.github.io/atlas";
  * Cole aqui o "Website ID" que o Umami mostra ao cadastrar o site.
  * Enquanto estiver vazio, nenhum script de analytics é carregado.
  */
-export const UMAMI_WEBSITE_ID = "";
+export const UMAMI_WEBSITE_ID = "47a2cb4d-9b1a-4e76-87e3-e13c1da5c47d";
 export const UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js";
 
 export function withBasePath(path: string): string {
