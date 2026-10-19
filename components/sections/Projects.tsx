@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ui/ProjectCard";
+import FeaturedProject from "@/components/ui/FeaturedProject";
 
 export default function Projects() {
   return (
@@ -16,7 +17,31 @@ export default function Projects() {
           soluções para desafios cada vez maiores.
         </p>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16">
+          <FeaturedProject
+            title="Atlas Parking"
+            badge="⭐ Projeto em destaque"
+            description="Plataforma SaaS multiempresa para gestão de estacionamentos: portaria com leitura de placas (LPR), mensalistas com cobrança e Pix automático, várias unidades por empresa, auditoria, LGPD e permissões por perfil. É o projeto mais completo que construí até agora — e continua em evolução."
+            image="/images/projects/atlas-parking/painel.png"
+            href="/projetos/atlas-parking"
+            sourceUrl="https://github.com/jv43291-boop/Atlas-Parking"
+            technologies={[
+              "PHP 8.2",
+              "MySQL 8.4",
+              "Docker",
+              "API REST",
+              "Playwright",
+              "GitHub Actions",
+            ]}
+            stats={[
+              { value: "v2.2", label: "Versão" },
+              { value: "20+", label: "Módulos" },
+              { value: "2FA", label: "Segurança" },
+            ]}
+          />
+        </div>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
           <ProjectCard
             title="Sistema Escolar"
@@ -49,7 +74,7 @@ export default function Projects() {
 
           <ProjectCard
             title="Atlas"
-            badge="⭐ Projeto Atual"
+            badge="💼 Este site"
             description="Meu portfólio profissional desenvolvido em Next.js, criado para apresentar meus projetos e acompanhar minha evolução como desenvolvedor."
             image="/images/projects/Atlas.png"
             href="/projetos/atlas"
@@ -59,21 +84,6 @@ export default function Projects() {
               "React",
               "TypeScript",
               "Tailwind CSS",
-            ]}
-          />
-
-          <ProjectCard
-            title="Atlas Parking"
-            badge="🚘 Plataforma Corporativa"
-            description="Plataforma para gestão de estacionamentos, controle de acessos, indicadores, auditoria e integração com sistemas LPR."
-            image="/images/projects/atlas-parking/02-dashboard.png"
-            href="/projetos/atlas-parking"
-            sourceUrl="https://github.com/jv43291-boop/Atlas-Parking"
-            technologies={[
-              "PHP 8.2",
-              "MySQL",
-              "Docker",
-              "Bootstrap 5",
             ]}
           />
 
