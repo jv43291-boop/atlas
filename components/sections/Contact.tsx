@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="mx-auto max-w-[1440px]">
         <p className="atlas-kicker" data-reveal>06 / Contato</p>
         <h2 className="pf-title pf-title--xl" data-reveal>
-          <span className="pf-line"><span>Vamos construir</span></span>
+          <span className="pf-line"><span>Vamos construir</span></span>{" "}
           <span className="pf-line pf-line--serif"><span>algo real.</span></span>
         </h2>
 

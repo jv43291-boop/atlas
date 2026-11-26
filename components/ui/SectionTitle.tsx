@@ -16,7 +16,7 @@ export default function SectionTitle({ kicker, line1, line2, intro }: SectionTit
         {kicker}
       </p>
       <h2 className="pf-title" data-reveal>
-        <span className="pf-line"><span>{line1}</span></span>
+        <span className="pf-line"><span>{line1}</span></span>{" "}
         <span className="pf-line pf-line--serif"><span>{line2}</span></span>
       </h2>
       {intro && (
