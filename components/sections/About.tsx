@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { withBasePath } from "@/lib/site";
 import InfoCard from "@/components/ui/InfoCard";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function About() {
   return (
@@ -9,13 +10,13 @@ export default function About() {
       className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">01 / Sobre</p>
-        <h2 className="atlas-display atlas-section-title mt-5">Quem vai fazer<br/><span className="text-blue-500">o seu projeto.</span></h2>
+        <SectionTitle kicker="01 / Sobre" line1="Quem vai fazer" line2="o seu projeto." />
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[0.7fr_1fr] lg:items-center">
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="relative mx-auto w-full max-w-md" data-reveal>
             <div className="absolute -left-5 -top-5 h-24 w-24 border-l border-t border-blue-500/70" />
-            <div className="relative aspect-[4/5] overflow-hidden border border-blue-400/25 bg-[#06101d]">
+            <div className="pf-photo relative aspect-[4/5] overflow-hidden border border-blue-400/25 bg-[#06101d]">
+              <div className="pf-photo__inner" data-parallax="0.06">
               <Image
                 src={withBasePath("/images/profile.webp")}
                 alt="Foto de João Victor"
@@ -23,11 +24,12 @@ export default function About() {
                 sizes="(min-width: 1024px) 420px, 90vw"
                 className="object-cover grayscale-[20%]"
               />
+              </div>
             </div>
             <div className="absolute -bottom-5 -right-5 border border-blue-400/20 bg-[#02070d] px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-blue-300">Full Stack / Mobile</div>
           </div>
 
-          <div className="max-w-2xl">
+          <div className="max-w-2xl" data-reveal data-reveal-d="1">
             <p className="text-xl leading-9 text-slate-200">
               Olá! Meu nome é{" "}
               <span className="font-bold text-white">
@@ -59,7 +61,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-24 grid border-l border-t border-blue-400/15 md:grid-cols-2 lg:grid-cols-4">
+        <div className="pf-stagger mt-24 grid border-l border-t border-blue-400/15 md:grid-cols-2 lg:grid-cols-4" data-reveal>
           <InfoCard
             icon="01"
             title="Escopo por escrito"

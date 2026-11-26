@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import localFont from "next/font/local";
 import {
   SITE_URL,
   UMAMI_WEBSITE_ID,
@@ -9,7 +10,34 @@ import {
 } from "@/lib/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import MotionRoot from "@/components/motion/MotionRoot";
 import "./globals.css";
+
+// Fontes servidas pelo próprio site (next/font/local), sem chamada ao Google.
+// Geist e Instrument Serif: SIL Open Font License (licenças em app/fonts/).
+const geist = localFont({
+  src: "./fonts/Geist-Variable.woff2",
+  variable: "--font-geist",
+  weight: "100 900",
+  display: "swap",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMono-Variable.woff2",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+  display: "swap",
+});
+const instrument = localFont({
+  src: "./fonts/InstrumentSerif-Italic.woff2",
+  variable: "--font-instrument",
+  style: "italic",
+  weight: "400",
+  display: "swap",
+});
+
+// Marca a página como "com JavaScript" antes da primeira pintura, para os
+// estados iniciais das animações não esconderem conteúdo de quem está sem JS.
+const jsFlag = "document.documentElement.classList.add('js')";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -103,9 +131,11 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className="h-full antialiased"
+      className={`h-full antialiased ${geist.variable} ${geistMono.variable} ${instrument.variable}`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <script dangerouslySetInnerHTML={{ __html: jsFlag }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -119,6 +149,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <MotionRoot />
         {UMAMI_WEBSITE_ID && (
           <Script
             src={UMAMI_SCRIPT_URL}

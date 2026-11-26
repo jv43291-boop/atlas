@@ -1,5 +1,6 @@
 import { MessageSquare, FileCheck, Layers, LifeBuoy, ArrowUpRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const WHATSAPP_URL =
   "https://wa.me/5592984337079?text=" +
@@ -70,43 +71,42 @@ export default function Process() {
       className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">03 / Como trabalho</p>
-        <h2 className="atlas-display atlas-section-title mt-5">
-          Sem surpresa
-          <br />
-          <span className="text-blue-500">no meio do caminho.</span>
-        </h2>
+        <SectionTitle
+          kicker="03 / Como trabalho"
+          line1="Sem surpresa"
+          line2="no meio do caminho."
+          intro={
+            <>
+              Os dois medos de quem contrata um desenvolvedor são &ldquo;vai
+              sumir&rdquo; e &ldquo;vai custar o quê&rdquo;. Meu processo existe
+              pra responder os dois antes de você gastar um real.
+            </>
+          }
+        />
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          Os dois medos de quem contrata um desenvolvedor são &ldquo;vai
-          sumir&rdquo; e &ldquo;vai custar o quê&rdquo;. Meu processo existe
-          pra responder os dois antes de você gastar um real.
-        </p>
-
-        <ol className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-2 xl:grid-cols-4">
+        {/* Linha do tempo: o fio se preenche conforme a rolagem e cada etapa acende ao ser alcançada. */}
+        <ol className="pf-timeline mt-20">
+          <span className="pf-timeline__rail" aria-hidden="true" />
+          <span className="pf-timeline__fill" data-progress aria-hidden="true" />
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <li key={step.title} className="bg-[#030b14] p-8 transition hover:bg-[#071528]">
-                <div className="flex items-start justify-between">
-                  <Icon className="text-blue-400" size={28} aria-hidden="true" />
-                  <span className="font-mono text-xs font-bold tracking-[0.2em] text-blue-400/70">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+              <li key={step.title} className="pf-timeline__step" data-step>
+                <span className="pf-timeline__node" aria-hidden="true">
+                  <Icon size={18} />
+                </span>
+                <span className="pf-timeline__n">{String(index + 1).padStart(2, "0")}</span>
+                <div className="pf-timeline__body">
+                  <h3 className="pf-card__title text-white">{step.title}</h3>
+                  <p className="mt-3 max-w-xl leading-7 text-slate-400">{step.description}</p>
                 </div>
-                <h3 className="mt-10 text-lg font-black uppercase tracking-[-0.02em] text-white">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-400">
-                  {step.description}
-                </p>
               </li>
             );
           })}
         </ol>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
+        <div className="mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div data-reveal>
             <h3 className="font-mono text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
               Formatos de contratação
             </h3>
@@ -122,15 +122,16 @@ export default function Process() {
               data-umami-event="whatsapp"
               data-umami-event-origem="como-trabalho"
               className="atlas-button-primary mt-8"
+              data-magnetic
             >
               Marcar a conversa <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </div>
 
-          <div className="grid gap-px border border-blue-400/15 bg-blue-400/15 sm:grid-cols-2">
+          <div className="pf-stagger grid gap-4 sm:grid-cols-2" data-reveal>
             {formats.map((format) => (
-              <div key={format.title} className="bg-[#030b14] p-7">
-                <h4 className="font-black uppercase tracking-[-0.02em] text-white">
+              <div key={format.title} className="pf-spot pf-card p-7" data-spotlight="flat">
+                <h4 className="pf-card__title text-white">
                   {format.title}
                 </h4>
                 <p className="mt-3 text-sm leading-6 text-slate-400">

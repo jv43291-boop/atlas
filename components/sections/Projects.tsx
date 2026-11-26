@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/ui/ProjectCard";
 import FeaturedProject from "@/components/ui/FeaturedProject";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function Projects() {
   return (
@@ -8,16 +9,20 @@ export default function Projects() {
       className="atlas-section px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">05 / Projetos</p>
-        <h2 className="atlas-display atlas-section-title mt-5">Projetos que<br/><span className="text-blue-500">marcam evolução.</span></h2>
+        <SectionTitle
+          kicker="05 / Projetos"
+          line1="Projetos que"
+          line2="marcam evolução."
+          intro={
+            <>
+              Alguns sistemas que construí, do controle de acesso de um órgão
+              público a uma plataforma de gestão com cobrança e integração com
+              câmeras. Clique em cada um pra ver telas e detalhes.
+            </>
+          }
+        />
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          Alguns sistemas que construí, do controle de acesso de um órgão
-          público a uma plataforma de gestão com cobrança e integração com
-          câmeras. Clique em cada um pra ver telas e detalhes.
-        </p>
-
-        <div className="mt-16">
+        <div className="mt-16" data-reveal>
           <FeaturedProject
             title="Atlas Parking"
             badge="⭐ Projeto em destaque"
@@ -41,7 +46,7 @@ export default function Projects() {
           />
         </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="pf-stagger mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-reveal>
 
           <ProjectCard
             title="Sistema Escolar"

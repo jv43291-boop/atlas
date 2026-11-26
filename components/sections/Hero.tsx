@@ -1,60 +1,73 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react";
+import HeroField from "@/components/motion/HeroField";
+import StatusCard from "@/components/motion/StatusCard";
+
+// Cada letra entra com um pequeno atraso. O atraso cresce um pouco menos a
+// cada letra, para a linha "chegar" como uma onda e não como um metrônomo.
+function Letters({ text, start }: { text: string; start: number }) {
+  return (
+    <>
+      {Array.from(text).map((ch, i) => (
+        <span
+          key={i}
+          className="pf-char"
+          aria-hidden="true"
+          style={{ "--d": `${Math.round(start + i * 34 - i * i * 0.6)}ms` } as React.CSSProperties}
+        >
+          {ch === " " ? " " : ch}
+        </span>
+      ))}
+    </>
+  );
+}
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="atlas-grid relative min-h-screen overflow-hidden bg-[#02070d] px-6 pb-16 pt-32 text-white lg:px-10 lg:pt-40"
-    >
-      <div className="atlas-grid-fade absolute inset-0" />
-      <div className="relative z-10 mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-[1fr_0.62fr] lg:items-end">
-        <div>
-          <p className="atlas-kicker">Desenvolvedor freelancer · Manaus, AM</p>
-          <h1 className="atlas-display mt-8 max-w-[980px] text-[clamp(3.8rem,9vw,9.2rem)]">
-            João Victor
-            <span className="block text-blue-500">Pinheiro</span>
-            Magalhães
+    <section id="hero" className="pf-hero">
+      <HeroField />
+      <div className="pf-hero__glow" aria-hidden="true" />
+
+      <div className="pf-hero__inner">
+        <div className="pf-hero__main">
+          <p className="atlas-kicker pf-enter" style={{ "--d": "80ms" } as React.CSSProperties}>
+            Desenvolvedor freelancer · Manaus, AM
+          </p>
+
+          <h1 className="pf-name" aria-label="João Victor Pinheiro Magalhães">
+            <span className="pf-name__line"><Letters text="João Victor" start={160} /></span>
+            <span className="pf-name__line pf-name__line--serif"><Letters text="Pinheiro" start={420} /></span>
+            <span className="pf-name__line"><Letters text="Magalhães" start={620} /></span>
           </h1>
-          <div className="mt-10 h-1 w-36 bg-blue-600" />
-          <h2 className="mt-7 font-mono text-sm font-bold uppercase tracking-[0.22em] text-slate-300 sm:text-base">
+
+          <div className="pf-hero__rule pf-enter" style={{ "--d": "900ms" } as React.CSSProperties} aria-hidden="true" />
+
+          <h2 className="pf-hero__sub pf-enter" style={{ "--d": "980ms" } as React.CSSProperties}>
             Sistemas, sites e automações para pequenas empresas
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+          <p className="pf-hero__lead pf-enter" style={{ "--d": "1040ms" } as React.CSSProperties}>
             Do orçamento à entrega, com uma pessoa só pra falar: eu desenho,
             construo, publico e mantenho — da tela ao banco de dados.
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#services"
-            className="atlas-button-primary"
-          >
-            Ver serviços <ArrowDown size={16} aria-hidden="true" />
-          </a>
-          <a
-            href="#projects"
-            className="atlas-button-secondary"
-          >
-            Explorar projetos <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-        </div>
+
+          <div className="pf-hero__cta pf-enter" style={{ "--d": "1100ms" } as React.CSSProperties}>
+            <a href="#services" className="atlas-button-primary" data-magnetic>
+              Ver serviços <ArrowDown size={16} aria-hidden="true" />
+            </a>
+            <a href="#projects" className="atlas-button-secondary" data-magnetic>
+              Explorar projetos <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          </div>
         </div>
 
-        <aside className="atlas-panel relative hidden min-h-[470px] overflow-hidden p-8 lg:block" aria-label="Resumo profissional">
-          <div className="absolute -right-16 top-24 h-64 w-64 rounded-full bg-blue-600/30 blur-3xl" />
-          <div className="relative flex h-full flex-col justify-between">
-            <div className="flex items-center justify-between border-b border-blue-400/20 pb-5 font-mono text-xs text-blue-300">
-              <span>ATLAS.SYSTEM</span><span>STATUS: ONLINE</span>
-            </div>
-            <div className="py-14">
-              <span className="text-[10rem] font-black leading-none tracking-[-0.1em] text-blue-600/90">A</span>
-              <p className="-mt-3 text-xs font-bold uppercase tracking-[0.34em] text-slate-400">Problema que vira sistema</p>
-            </div>
-            <div className="grid grid-cols-2 border-t border-blue-400/20 pt-5 font-mono text-xs uppercase tracking-wider text-slate-500">
-              <span>Web / Mobile</span><span className="text-right">Sistemas / Automações</span>
-            </div>
-          </div>
-        </aside>
+        <div className="pf-hero__side pf-enter" style={{ "--d": "760ms" } as React.CSSProperties}>
+          <StatusCard />
+        </div>
       </div>
+
+      <a href="#about" className="pf-scrollcue" aria-label="Rolar para Sobre">
+        <span>Role</span>
+        <span className="pf-scrollcue__track" aria-hidden="true"><span /></span>
+      </a>
     </section>
   );
 }

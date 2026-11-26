@@ -22,9 +22,9 @@ export default function ProjectCard({
   sourceUrl,
 }: ProjectCardProps) {
   return (
-    <article className="atlas-panel group flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-blue-400/60">
+    <article className="pf-spot pf-project atlas-panel group flex h-full flex-col overflow-hidden" data-spotlight>
 
-      <div className="relative h-64 overflow-hidden border-b border-blue-400/15">
+      <div className="pf-project__media relative h-64 overflow-hidden border-b border-blue-400/15">
         <Image
           src={withBasePath(image)}
           alt={title}
@@ -40,7 +40,7 @@ export default function ProjectCard({
           {badge}
         </span>
 
-        <h3 className="text-2xl font-black uppercase leading-tight tracking-[-0.04em] text-white">
+        <h3 className="pf-card__title pf-card__title--lg text-white">
           {title}
         </h3>
 

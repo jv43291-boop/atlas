@@ -8,6 +8,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const WHATSAPP_NUMBER = "5592984337079";
 
@@ -81,27 +82,28 @@ export default function Services() {
       className="atlas-section atlas-grid px-6 py-28 lg:px-10 lg:py-36"
     >
       <div className="mx-auto max-w-[1440px]">
-        <p className="atlas-kicker">02 / Serviços</p>
-        <h2 className="atlas-display atlas-section-title mt-5">
-          Serviços para
-          <br />
-          <span className="text-blue-500">tirar do papel.</span>
-        </h2>
+        <SectionTitle
+          kicker="02 / Serviços"
+          line1="Serviços para"
+          line2="tirar do papel."
+          intro={
+            <>
+              Trabalho como desenvolvedor freelancer em Manaus, atendendo
+              presencialmente ou remoto. Cada serviço começa com uma conversa
+              rápida para entender o problema — o orçamento vem depois, sem
+              compromisso.
+            </>
+          }
+        />
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          Trabalho como desenvolvedor freelancer em Manaus, atendendo
-          presencialmente ou remoto. Cada serviço começa com uma conversa
-          rápida para entender o problema — o orçamento vem depois, sem
-          compromisso.
-        </p>
-
-        <div className="mt-16 grid gap-px border border-blue-400/15 bg-blue-400/15 md:grid-cols-2 xl:grid-cols-3">
+        <div className="pf-stagger pf-cards mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3" data-reveal>
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <article
                 key={service.id}
-                className="group flex flex-col bg-[#030b14] p-8 transition hover:bg-[#071528]"
+                className="pf-spot pf-card group flex flex-col p-8"
+                data-spotlight
               >
                 <div className="flex items-start justify-between">
                   <Icon className="text-blue-400" size={28} aria-hidden="true" />
@@ -110,7 +112,7 @@ export default function Services() {
                   </span>
                 </div>
 
-                <h3 className="mt-10 text-lg font-black uppercase tracking-[-0.02em] text-white">
+                <h3 className="pf-card__title mt-10 text-white">
                   {service.title}
                 </h3>
 
@@ -148,10 +150,10 @@ export default function Services() {
             );
           })}
 
-          <div className="flex flex-col justify-between bg-blue-600 p-8 text-white">
+          <div className="pf-card pf-card--cta flex flex-col justify-between p-8 text-white">
             <div>
               <MessageCircle size={28} aria-hidden="true" />
-              <h3 className="mt-10 text-lg font-black uppercase tracking-[-0.02em]">
+              <h3 className="pf-card__title mt-10">
                 Não achou o seu caso?
               </h3>
               <p className="mt-3 text-sm leading-6 text-blue-100">
@@ -166,7 +168,8 @@ export default function Services() {
               data-umami-event="whatsapp"
               data-umami-event-origem="servicos"
               data-umami-event-servico="outro"
-              className="mt-8 inline-flex items-center gap-2 border border-white/40 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-white hover:text-blue-700"
+              data-magnetic
+              className="pf-btn-light mt-8 inline-flex w-fit items-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-[0.14em]"
             >
               Chamar no WhatsApp <ArrowUpRight size={14} aria-hidden="true" />
             </a>

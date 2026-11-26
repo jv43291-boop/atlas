@@ -30,7 +30,7 @@ export default function FeaturedProject({
   stats,
 }: FeaturedProjectProps) {
   return (
-    <article className="atlas-panel group relative overflow-hidden border border-blue-500/40 transition duration-300 hover:border-blue-400/80">
+    <article className="pf-featured atlas-panel group relative overflow-hidden border border-blue-500/40 transition-colors duration-300 hover:border-blue-400/80">
       <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-blue-600/25 blur-3xl" />
 
       <div className="relative grid lg:grid-cols-[0.95fr_1.05fr]">
@@ -39,7 +39,7 @@ export default function FeaturedProject({
             {badge}
           </span>
 
-          <h3 className="atlas-display text-[clamp(2.4rem,5vw,4.5rem)] text-white">
+          <h3 className="pf-featured__title text-white">
             {title}
           </h3>
 
@@ -72,7 +72,7 @@ export default function FeaturedProject({
           </div>
 
           <div className="mt-auto flex flex-col gap-3 pt-10 sm:flex-row">
-            <Link href={href} className="atlas-button-primary">
+            <Link href={href} className="atlas-button-primary" data-magnetic>
               Ver projeto completo <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
             {sourceUrl && (
@@ -88,14 +88,16 @@ export default function FeaturedProject({
           </div>
         </div>
 
-        <div className="relative min-h-[320px] overflow-hidden border-t border-blue-400/15 lg:min-h-0 lg:border-l lg:border-t-0">
+        <div className="pf-featured__media relative min-h-[320px] overflow-hidden border-t border-blue-400/15 lg:min-h-0 lg:border-l lg:border-t-0">
+          <div className="pf-featured__img" data-parallax="0.08">
           <Image
             src={withBasePath(image)}
             alt={`Tela do ${title}`}
             fill
             sizes="(min-width: 1024px) 55vw, 100vw"
-            className="object-cover object-left-top transition duration-700 group-hover:scale-[1.03]"
+            className="object-cover object-left-top"
           />
+          </div>
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02070d]/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#02070d]/60" />
         </div>
       </div>
